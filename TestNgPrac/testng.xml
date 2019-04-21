@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="browser" value="Chrome"></parameter>
+<parameter name="url" value="https://www.icicibank.com/"></parameter>
+<test thread-count="5" name="Test">
+<groups>
+<define name="new_car">
+<include name="car"/>
+<include name="ecar"/>
+</define>
+<run>
+<include name="new_car"/>
+<exclude name="ecar"/>
+</run>
+</groups>
+   
+ <classes>
+      <class name="Hello"/>
+    </classes>
+   
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
